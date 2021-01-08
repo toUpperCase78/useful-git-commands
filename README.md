@@ -8,6 +8,6 @@ And yes, it worked by using `git push`, including two other git commands beforeh
 
 These commands should be entered inside git bash while in the local directory:
 
-* `git remote add origin` <clone-url>
+* `git remote add origin <clone-url>`
 * `git branch -M main`
 * `git push -u origin main`
