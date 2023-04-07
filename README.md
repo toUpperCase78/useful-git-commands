@@ -6,7 +6,7 @@ _Also uploaded Git Cheat Sheets images that explain the commands with some visua
 
 ### CREATE
 
-Clone an existing repository: `$ git clone <github_website_ending_with_git>`
+Clone an existing repository: `$ git clone <github_url>`
 
 Create a new local repository: `$ git init`
 
@@ -16,6 +16,8 @@ See the latest status in your working directory: `$ git status`
 
 See changes to tracked files: `$ git diff`
 
+See changes between two commits: `$ git diff <commit_ID1> <ommit_ID2>`
+
 Add all current changes to the next commit: `$ git add .`
 
 Add some changes in file to the next commit: `$ git add -p <file>`
@@ -23,6 +25,10 @@ Add some changes in file to the next commit: `$ git add -p <file>`
 Commit all local changes in tracked files: `$ git commit -a`
 
 Commit previously staged changes: `$ git commit`
+
+Commit staged changes with a message: `$ git commit -m <message>`
+
+All all changes made to tracked files and commit: `$ git commit -am <message>`
 
 Change the last commit: `$ git commit --amend`
 
@@ -41,6 +47,8 @@ List all existing branches: `$ git branch`
 Switch to the branch: `$ git checkout <branch>`
 
 Create a new branch based on your current HEAD: `$ git branch <new_branch>`
+
+Create a new branch and switch to it: `$ git checkout -b <new_branch>`
 
 Create a new tracking branch based on a remote branch: `$ git checkout --track <remote/branch>` 
 
@@ -78,9 +86,13 @@ Continue a rebase after resolving conflicts: `$ git rebase --continue`
 
 User your configured merge tool to solve conflicts: `$ git mergetool`
 
-Use your editor to manually solve conflicts and (after resolving) mark file as resolved: `$ git add <resolved_file>`, `$ git rm <resolved_file>`
-
 ### UNDO
+
+Move/rename a file and stage move: `$ git mv <existing_path> <new_path>`
+
+Remove a file from working directory and staging area, then stage the removal: `$ git rm <file>`
+
+Remove from staging area only: `$ git rm --cached <file>`
 
 Discard all local changes in your working directory: `$ git reset --hard HEAD`
 
